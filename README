@@ -1,0 +1,3 @@
+I used the yeoman generator-react-webpack project to generate this one.  After
+that I installed famo.us ui library with `npm install famous`.  The trick here
+was adding the alias to the webpack config file under the resolve section.
