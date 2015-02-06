@@ -1,12 +1,18 @@
 /** @jsx React.DOM */
 
+'use strict';
+
 var ReactWebpackDemoApp = require('./ReactWebpackDemoApp');
 var React = require('react');
-var {DefaultRoute, Route, Routes} = require('react-router');
+var Router = require('react-router');
+var { DefaultRoute, Route } = Router;
 
-React.renderComponent((
-  <Routes location="history">
-    <Route path="/" handler={ReactWebpackDemoApp}>
+var Routes = (
+    <Route handler={ReactWebpackDemoApp}>
+        <Route name="/" handler={React.createElement(ReactWebpackDemoApp)} />
     </Route>
-  </Routes>
-), document.getElementById('content'));
+);
+Router.run(Routes, function(Handler) {
+    React.render(<Handler />, document.getElementById('content'));
+});
+
