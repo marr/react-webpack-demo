@@ -7,9 +7,6 @@ var React = require('react'),
 var QuestionForm = function(kwargs) {
 
     var formConfig = {
-        //constructor: function() {
-            //QuestionForm.__super__.constructor.call(this, kwargs);
-        //},
         errorCssClass: 'error-field'
     };
 
@@ -50,7 +47,8 @@ module.exports = React.createClass({
                 action="/foo"
                 method="POST"
                 onSubmit={this.onSubmit}>
-                {questionForm.render()}
+                <forms.RenderForm form={questionForm} />
+                <button>post</button>
             </form>
         );
     }
