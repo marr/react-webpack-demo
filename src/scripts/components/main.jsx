@@ -9,7 +9,7 @@ var { DefaultRoute, Route } = Router;
 
 var Routes = (
     <Route handler={ReactWebpackDemoApp}>
-        <Route name="/" handler={React.createElement(ReactWebpackDemoApp)} />
+        <Route name="/" handler={ReactWebpackDemoApp} />
     </Route>
 );
 Router.run(Routes, function(Handler) {
