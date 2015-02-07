@@ -4,9 +4,12 @@
 
 'use strict';
 
-var React = require('react/addons');
+var React = require('react/addons'),
+    QuestionForm = require('./QuestionForm');
 
-var { Link, RouteHandler } = require('react-router');
+var questions = [
+    { id: 0, name: '?'}
+];
 
 // Export React so the devtools can find it
 (window !== window.top ? window.top : window).React = React;
@@ -17,7 +20,7 @@ require('../../styles/main.css');
 
 var ReactWebpackDemoApp = React.createClass({
     render: function() {
-        return (<div><RouteHandler /></div>);
+        return <QuestionForm questions={questions} />;
     }
 });
 
