@@ -6,7 +6,8 @@
  */
 
 'use strict';
-var webpack = require('webpack');
+var webpack = require('webpack'),
+    ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 
@@ -42,6 +43,9 @@ module.exports = {
       loader: 'jshint'
     }],
     loaders: [{
+        test: /\.scss?$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'raw-loader!sass-loader?outputStyle=expanded&includePaths[]=' + __dirname + '/src/styles') },
+    {
       test: /\.jsx$/,
       loader: 'react-hot!jsx-loader?harmony'
     }, {

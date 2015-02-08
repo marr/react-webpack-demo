@@ -8,7 +8,7 @@ var React = require('react/addons'),
     QuestionForm = require('./QuestionForm');
 
 var questions = [
-    { id: 0, name: '?'}
+    { guid: 0, name: '?', type: 'field'}
 ];
 
 // Export React so the devtools can find it

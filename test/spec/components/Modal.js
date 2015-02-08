@@ -5,7 +5,7 @@ describe('Modal', function () {
 
   beforeEach(function () {
     Modal = require('../../../src/scripts/components/Modal.jsx');
-    component = Modal();
+    component = new Modal();
   });
 
   it('should create a new instance of Modal', function () {

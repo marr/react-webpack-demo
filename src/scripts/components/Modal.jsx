@@ -9,7 +9,7 @@ var React = require('react/addons');
 var Engine = require('famous/core/Engine');
 var Surface = require('famous/core/Surface');
 
-require('../../styles/Modal.less');
+require('../../styles/Modal.scss');
 
 var Modal = React.createClass({
     componentDidMount: function() {
