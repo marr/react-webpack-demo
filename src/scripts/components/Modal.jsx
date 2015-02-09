@@ -9,7 +9,7 @@ var React = require('react/addons');
 var Engine = require('famous/core/Engine');
 var Surface = require('famous/core/Surface');
 
-require('../../styles/Modal.scss');
+require('../../styles/Modal.css');
 
 var Modal = React.createClass({
     componentDidMount: function() {
@@ -17,10 +17,8 @@ var Modal = React.createClass({
         var mainContext = Engine.createContext(domNode);
 
         // Create a react component from the children passed in
-        var div = React.DOM.div({
-            className: 'tilt-lightbox'
-        }, this.props.children);
-        var content = React.renderComponentToString(div);
+        var div = <div className='lightbox'>{this.props.children}</div>;
+        var content = React.render(div);
         
         // Render out the new component into the content of the surface
         var surface = new Surface({

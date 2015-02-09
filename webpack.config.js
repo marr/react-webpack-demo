@@ -7,7 +7,7 @@
 
 'use strict';
 var webpack = require('webpack'),
-    ExtractTextPlugin = require('extract-text-webpack-plugin');
+    ExtractTextPlugin = webpack.ExtractTextPlugin;
 
 module.exports = {
 
@@ -42,9 +42,11 @@ module.exports = {
       exclude: 'node_modules',
       loader: 'jshint'
     }],
-    loaders: [{
-        test: /\.scss?$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'raw-loader!sass-loader?outputStyle=expanded&includePaths[]=' + __dirname + '/src/styles') },
+    loaders: [
+    //{
+        //test: /\.scss?$/,
+        //loader: ExtractTextPlugin.extract('style-loader', 'raw-loader!sass-loader?outputStyle=expanded&includePaths[]=' + __dirname + '/src/styles')
+    //},
     {
       test: /\.jsx$/,
       loader: 'react-hot!jsx-loader?harmony'

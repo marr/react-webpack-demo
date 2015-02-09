@@ -5,7 +5,7 @@
 'use strict';
 
 var React = require('react/addons'),
-    QuestionForm = require('./QuestionForm');
+    QuestionForm = require('./QuestionForm.jsx');
 
 var questions = [
     { guid: 0, name: '?', type: 'field'}
