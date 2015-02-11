@@ -18,9 +18,15 @@ var questions = [
 require('../../styles/normalize.css');
 require('../../styles/main.css');
 
+
+// SASS
+require('../../styles/demo.scss');
+
 var ReactWebpackDemoApp = React.createClass({
     render: function() {
-        return <QuestionForm questions={questions} />;
+        return <div className="demo">
+            <QuestionForm questions={questions} />
+        </div>;
     }
 });
 

@@ -43,6 +43,7 @@ module.exports = {
       loader: 'jshint'
     }],
     loaders: [
+    { test: /\.scss$/, loader: 'style!css!sass' },
     //{
         //test: /\.scss?$/,
         //loader: ExtractTextPlugin.extract('style-loader', 'raw-loader!sass-loader?outputStyle=expanded&includePaths[]=' + __dirname + '/src/styles')
